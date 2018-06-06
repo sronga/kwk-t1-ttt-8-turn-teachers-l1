@@ -51,7 +51,8 @@ def turn(board)
 
   if valid_move?(board, index)
     move(board, index)
-  else "filler"
+  else "Sorry that move is not value"
+    turn(board)
   end
 end
 
