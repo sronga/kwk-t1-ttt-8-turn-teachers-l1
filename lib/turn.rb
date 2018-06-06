@@ -43,7 +43,7 @@ def turn(board)
     end
 
   if valid_move?(board, index)
-      move(board, index)
+      move(board, index, "O")
       display_board(board)
   end
 
