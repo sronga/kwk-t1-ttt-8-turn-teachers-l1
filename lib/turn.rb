@@ -31,17 +31,7 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-if position_taken?(board, index) == true
-    false
- elsif position_taken?(board, index) == false
-   (
-    if index <= 8 && index >= 0
-      true
-    else
-      false
-    end
-    )
-  end
+index.is_a?(Integer) && index.between(0,8) && !position_taken?(board, index)
 end
 
 def turn(board)
