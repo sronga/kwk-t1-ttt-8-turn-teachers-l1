@@ -43,3 +43,6 @@ if position_taken?(board, index) == true
     )
   end
 end
+
+puts "Welcome to Tic Tac Toe!"
+display_board(board)
