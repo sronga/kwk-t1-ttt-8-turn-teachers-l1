@@ -17,14 +17,15 @@ def move(array,index,token="X")
 end
 
 def turn(board)
-  index = "INVALID"
+  puts "Please enter 1-9:"
+  input = gets.strip
+  input = input_to_index(input)
+  token = 'X'
 
-    until valid_move?(board, index) == true
-        puts "Please enter 1-9:"
-        input = gets.strip
-
-        index = input_to_index(input)
-    end
+	until valid_move?(board, input)
+    input = gets.strip
+    input = input_to_index(input)
+  end
 
   if valid_move?(board, index)
       move(board, index)
