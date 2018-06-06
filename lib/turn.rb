@@ -31,21 +31,16 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-  if index.is_a(Integer)?
-  (
-  if position_taken?(board, index) == true
+if position_taken?(board, index) == true
+    false
+ elsif position_taken?(board, index) == false
+   (
+    if index <= 8 && index >= 0
+      true
+    else
       false
-    elsif position_taken?(board, index) == false
-      (
-      if index <= 8 && index >= 0
-        true
-      else
-        false
-      end
-      )
-  end
-  )
-  else false
+    end
+    )
   end
 end
 
