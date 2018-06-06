@@ -46,7 +46,7 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  gets
+  
 end
 
 puts "Welcome to Tic Tac Toe!"
