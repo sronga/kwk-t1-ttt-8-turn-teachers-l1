@@ -49,11 +49,9 @@ def turn(board)
   until valid_move?(board, index)
   user_input = gets.strip
   index = input_to_index(user_input)
-end
+  end
   if valid_move(board, index)
     move(board, index)
-  else "Sorry that move is not value"
-    turn(board)
   end
 end
 
