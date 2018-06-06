@@ -35,7 +35,7 @@ index.is_a?(Integer) && index.between?(0,8) && !position_taken?(board, index)
 end
 
 def turn(board)
-  index = 1000
+  index = 5
     until valid_move?(board, index) == true
         puts "Please enter 1-9:"
         user_input = gets.strip
