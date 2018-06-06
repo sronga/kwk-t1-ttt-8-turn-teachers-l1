@@ -45,6 +45,7 @@ if position_taken?(board, index) == true
 end
 
 def turn(board)
+  index = "INVALID"
   until valid_move(board, index)
   puts "Please enter 1-9:"
   user_input = gets.strip
