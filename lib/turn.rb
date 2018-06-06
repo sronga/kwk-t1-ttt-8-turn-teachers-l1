@@ -46,14 +46,16 @@ end
 
 def turn(board)
   index = "INVALID"
-  until valid_move(board, index)
-  puts "Please enter 1-9:"
-  user_input = gets.strip
-  index = input_to_index(user_input)
-  end
+    until valid_move(board, index)
+        puts "Please enter 1-9:"
+        user_input = gets.strip
+        index = input_to_index(user_input)
+      end
+
   if valid_move(board, index)
-    move(board, index)
+      move(board, index)
   end
+  
 end
 
 puts "Welcome to Tic Tac Toe!"
