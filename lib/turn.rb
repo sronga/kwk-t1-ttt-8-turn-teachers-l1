@@ -58,4 +58,5 @@ end
 
 puts "Welcome to Tic Tac Toe!"
 display_board(board)
-#turn(board)
+turn(board)
+display_board(board)
