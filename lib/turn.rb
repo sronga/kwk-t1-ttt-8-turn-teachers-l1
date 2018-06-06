@@ -16,6 +16,22 @@ def move(array,index,token="X")
   array[index] = token
 end
 
+def turn(board)
+  index = "INVALID"
+
+    until valid_move?(board, index) == true
+        puts "Please enter 1-9:"
+        input = gets.strip
+
+        index = input_to_index(input)
+    end
+
+  if valid_move?(board, index)
+      move(board, index)
+  end
+display_board(board)
+end
+
 def position_taken?(board, index)
     if board[index] == " "
       false
@@ -34,21 +50,6 @@ def valid_move?(board, index)
 index.is_a?(Integer) && index.between?(0,8) && !position_taken?(board, index)
 end
 
-def turn(board)
-  index = "INVALID"
-
-    until valid_move?(board, index) == true
-        puts "Please enter 1-9:"
-        input = gets.strip
-
-        index = input_to_index(input)
-    end
-
-  if valid_move?(board, index)
-      move(board, index)
-  end
-display_board(board)
-end
 
 puts "Welcome to Tic Tac Toe!"
 display_board(board)
