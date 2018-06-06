@@ -8,14 +8,6 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def input_to_index(input)
-  input.to_i - 1
-end
-
-def move(array,index,token="X")
-  array[index] = token
-end
-
 def turn(board)
   index = "INVALID"
 
@@ -30,6 +22,14 @@ def turn(board)
       move(board, index)
   end
 display_board(board)
+end
+
+def input_to_index(input)
+  input.to_i - 1
+end
+
+def move(array,index,token="X")
+  array[index] = token
 end
 
 def position_taken?(board, index)
