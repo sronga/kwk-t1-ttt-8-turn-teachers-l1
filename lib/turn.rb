@@ -25,7 +25,8 @@ display_board(board)
 end
 
 def input_to_index(input)
-  input.to_i - 1
+  input = input.to_i
+  input = input - 1
 end
 
 def move(array,index,token="X")
@@ -47,10 +48,5 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-index.is_a?(Integer) && index.between?(0,8) && !position_taken?(board, index)
+  index.is_a?(Integer) && index.between?(0,8) && !position_taken?(board, index)
 end
-
-
-puts "Welcome to Tic Tac Toe!"
-display_board(board)
-#turn(board)
