@@ -31,6 +31,7 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
+if index.is_a(Integer)? (
 if position_taken?(board, index) == true
     false
  elsif position_taken?(board, index) == false
@@ -42,6 +43,9 @@ if position_taken?(board, index) == true
     end
     )
   end
+  )
+else false 
+end
 end
 
 def turn(board)
