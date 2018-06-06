@@ -54,10 +54,11 @@ def turn(board)
 
   if valid_move?(board, index)
       move(board, index)
+      display_board(board)
   end
 
 end
 
 puts "Welcome to Tic Tac Toe!"
 display_board(board)
-turn(board)
+#turn(board)
